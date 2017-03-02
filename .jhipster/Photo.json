@@ -1,0 +1,88 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userPhotoVote",
+            "otherEntityName": "userPhotoVote",
+            "otherEntityRelationshipName": "photo"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userPhotoComment",
+            "otherEntityName": "userPhotoComment",
+            "otherEntityRelationshipName": "photo"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "siteUser",
+            "otherEntityName": "siteUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "concours",
+            "otherEntityName": "concours",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateCreate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "uri",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "size",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "format",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "score",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "nbVue",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170223144505",
+    "entityTableName": "photo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

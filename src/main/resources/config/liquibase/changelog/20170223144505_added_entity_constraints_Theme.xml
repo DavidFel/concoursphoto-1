@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Theme.
+    -->
+    <changeSet id="20170223144505-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="themes_id"
+                                 baseTableName="theme_concours"
+                                 constraintName="fk_theme_concours_themes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="theme"/>
+        <addForeignKeyConstraint baseColumnNames="concours_id"
+                                 baseTableName="theme_concours"
+                                 constraintName="fk_theme_concours_concours_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="concours"/>
+        
+    </changeSet>
+</databaseChangeLog>

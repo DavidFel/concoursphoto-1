@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="concoursphotoApp.userPhotoComment.detail.title">User Photo Comment</span> {{vm.userPhotoComment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="concoursphotoApp.userPhotoComment.comment">Comment</span></dt>
+        <dd>
+            <span>{{vm.userPhotoComment.comment}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoComment.date">Date</span></dt>
+        <dd>
+            <span>{{vm.userPhotoComment.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoComment.siteUser">Site User</span></dt>
+        <dd>
+            <a ui-sref="site-user-detail({id:vm.userPhotoComment.siteUser.id})">{{vm.userPhotoComment.siteUser.id}}</a>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoComment.photo">Photo</span></dt>
+        <dd>
+            <a ui-sref="photo-detail({id:vm.userPhotoComment.photo.id})">{{vm.userPhotoComment.photo.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="user-photo-comment-detail.edit({id:vm.userPhotoComment.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

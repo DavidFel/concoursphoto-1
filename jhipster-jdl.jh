@@ -1,0 +1,66 @@
+
+enum UserType{
+		VOTANT, PARTICIPANT, MIXTE 
+}
+    
+entity Photo {
+	  title String required,
+      dateCreate LocalDate required,
+	  uri String required,
+      image ImageBlob,
+	  description String,
+      size Integer required,
+      format String required,
+      score Float,
+      nbVue Integer
+}
+
+entity SiteUser {
+	firstName String required,
+    lastName String required,
+    birthDate LocalDate,
+    email String required ,
+    address String,
+    jobTitle String,
+    charte Boolean,
+    type UserType  
+}
+
+entity Concours {
+	name String,
+    startDate LocalDate required,
+    endDate LocalDate required,
+    description String,
+    location String
+}
+
+entity Theme {
+	name String
+}
+
+entity UserPhotoVote {
+	stars Integer required,
+    date LocalDate required
+}
+
+entity UserPhotoComment{
+	comment String required,
+    date LocalDate required
+}
+
+relationship OneToMany {
+	Photo{userPhotoVote} to UserPhotoVote{photo},
+    Photo{userPhotoComment} to UserPhotoComment{photo}
+}
+
+relationship ManyToOne {
+	UserPhotoComment{SiteUser} to SiteUser,
+    Photo{SiteUser} to SiteUser,
+    UserPhotoVote{SiteUser} to SiteUser,
+    Photo{concours} to Concours,
+    User{SiteUser} to SiteUser
+} 
+
+relationship ManyToMany{
+	Theme{concours} to Concours{theme}
+}

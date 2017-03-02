@@ -1,0 +1,34 @@
+{
+    "concoursphotoApp": {
+        "photo" : {
+            "home": {
+                "title": "Photos",
+                "createLabel": "Create a new Photo",
+                "createOrEditLabel": "Create or edit a Photo",
+                "search": "Search for Photo"
+            },
+            "created": "A new Photo is created with identifier {{ param }}",
+            "updated": "A Photo is updated with identifier {{ param }}",
+            "deleted": "A Photo is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Photo {{ id }}?"
+            },
+            "detail": {
+                "title": "Photo"
+            },
+            "title": "Title",
+            "dateCreate": "Date Create",
+            "uri": "Uri",
+            "image": "Image",
+            "description": "Description",
+            "size": "Size",
+            "format": "Format",
+            "score": "Score",
+            "nbVue": "Nb Vue",
+            "userPhotoVote": "User Photo Vote",
+            "userPhotoComment": "User Photo Comment",
+            "siteUser": "Site User",
+            "concours": "Concours"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="concoursphotoApp.userPhotoVote.detail.title">User Photo Vote</span> {{vm.userPhotoVote.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="concoursphotoApp.userPhotoVote.stars">Stars</span></dt>
+        <dd>
+            <span>{{vm.userPhotoVote.stars}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoVote.date">Date</span></dt>
+        <dd>
+            <span>{{vm.userPhotoVote.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoVote.siteUser">Site User</span></dt>
+        <dd>
+            <a ui-sref="site-user-detail({id:vm.userPhotoVote.siteUser.id})">{{vm.userPhotoVote.siteUser.id}}</a>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.userPhotoVote.photo">Photo</span></dt>
+        <dd>
+            <a ui-sref="photo-detail({id:vm.userPhotoVote.photo.id})">{{vm.userPhotoVote.photo.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="user-photo-vote-detail.edit({id:vm.userPhotoVote.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

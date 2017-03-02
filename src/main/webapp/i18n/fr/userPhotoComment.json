@@ -1,0 +1,25 @@
+{
+    "concoursphotoApp": {
+        "userPhotoComment" : {
+            "home": {
+                "title": "UserPhotoComments",
+                "createLabel": "Créer un nouveau User Photo Comment",
+                "createOrEditLabel": "Créer ou éditer un User Photo Comment",
+                "search": "Recherche pour User Photo Comment"
+            },
+            "created": "Un nouveau User Photo Comment a été créé avec l'identifiant {{ param }}",
+            "updated": "Le User Photo Comment avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le User Photo Comment avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le User Photo Comment {{ id }} ?"
+            },
+            "detail": {
+                "title": "User Photo Comment"
+            },
+            "comment": "Comment",
+            "date": "Date",
+            "siteUser": "Site User",
+            "photo": "Photo"
+        }
+    }
+}

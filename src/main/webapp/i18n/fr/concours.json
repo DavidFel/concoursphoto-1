@@ -1,0 +1,27 @@
+{
+    "concoursphotoApp": {
+        "concours" : {
+            "home": {
+                "title": "Concours",
+                "createLabel": "Créer un nouveau Concours",
+                "createOrEditLabel": "Créer ou éditer un Concours",
+                "search": "Recherche pour Concours"
+            },
+            "created": "Un nouveau Concours a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Concours avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Concours avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Concours {{ id }} ?"
+            },
+            "detail": {
+                "title": "Concours"
+            },
+            "name": "Name",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "description": "Description",
+            "location": "Location",
+            "theme": "Theme"
+        }
+    }
+}

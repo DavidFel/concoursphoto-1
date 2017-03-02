@@ -1,0 +1,68 @@
+
+<div>
+    <h2><span data-translate="concoursphotoApp.photo.detail.title">Photo</span> {{vm.photo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="concoursphotoApp.photo.title">Title</span></dt>
+        <dd>
+            <span>{{vm.photo.title}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.dateCreate">Date Create</span></dt>
+        <dd>
+            <span>{{vm.photo.dateCreate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.uri">Uri</span></dt>
+        <dd>
+            <span>{{vm.photo.uri}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.image">Image</span></dt>
+        <dd>
+            <div ng-if="vm.photo.image">
+                <a ng-click="vm.openFile(vm.photo.imageContentType, vm.photo.image)">
+                    <img data-ng-src="{{'data:' + vm.photo.imageContentType + ';base64,' + vm.photo.image}}" style="max-width: 100%;" alt="photo image"/>
+                </a>
+                {{vm.photo.imageContentType}}, {{vm.byteSize(vm.photo.image)}}
+            </div>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.description">Description</span></dt>
+        <dd>
+            <span>{{vm.photo.description}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.size">Size</span></dt>
+        <dd>
+            <span>{{vm.photo.size}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.format">Format</span></dt>
+        <dd>
+            <span>{{vm.photo.format}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.score">Score</span></dt>
+        <dd>
+            <span>{{vm.photo.score}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.nbVue">Nb Vue</span></dt>
+        <dd>
+            <span>{{vm.photo.nbVue}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.siteUser">Site User</span></dt>
+        <dd>
+            <a ui-sref="site-user-detail({id:vm.photo.siteUser.id})">{{vm.photo.siteUser.id}}</a>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.photo.concours">Concours</span></dt>
+        <dd>
+            <a ui-sref="concours-detail({id:vm.photo.concours.id})">{{vm.photo.concours.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="photo-detail.edit({id:vm.photo.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

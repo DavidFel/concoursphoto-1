@@ -1,0 +1,25 @@
+{
+    "concoursphotoApp": {
+        "userPhotoVote" : {
+            "home": {
+                "title": "UserPhotoVotes",
+                "createLabel": "Créer un nouveau User Photo Vote",
+                "createOrEditLabel": "Créer ou éditer un User Photo Vote",
+                "search": "Recherche pour User Photo Vote"
+            },
+            "created": "Un nouveau User Photo Vote a été créé avec l'identifiant {{ param }}",
+            "updated": "Le User Photo Vote avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le User Photo Vote avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le User Photo Vote {{ id }} ?"
+            },
+            "detail": {
+                "title": "User Photo Vote"
+            },
+            "stars": "Stars",
+            "date": "Date",
+            "siteUser": "Site User",
+            "photo": "Photo"
+        }
+    }
+}

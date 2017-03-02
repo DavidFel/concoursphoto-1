@@ -1,0 +1,10 @@
+{
+    "concoursphotoApp": {
+        "UserType" : {
+            "null": "",
+            "VOTANT": "VOTANT",
+            "PARTICIPANT": "PARTICIPANT",
+            "MIXTE": "MIXTE"
+        }
+    }
+}

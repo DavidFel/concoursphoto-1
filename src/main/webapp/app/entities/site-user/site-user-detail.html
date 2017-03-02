@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="concoursphotoApp.siteUser.detail.title">Site User</span> {{vm.siteUser.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row jh-entity-details">
+        <dt><span data-translate="concoursphotoApp.siteUser.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.siteUser.firstName}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.siteUser.lastName}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.birthDate">Birth Date</span></dt>
+        <dd>
+            <span>{{vm.siteUser.birthDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.email">Email</span></dt>
+        <dd>
+            <span>{{vm.siteUser.email}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.address">Address</span></dt>
+        <dd>
+            <span>{{vm.siteUser.address}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.jobTitle">Job Title</span></dt>
+        <dd>
+            <span>{{vm.siteUser.jobTitle}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.charte">Charte</span></dt>
+        <dd>
+            <span>{{vm.siteUser.charte}}</span>
+        </dd>
+        <dt><span data-translate="concoursphotoApp.siteUser.type">Type</span></dt>
+        <dd>
+            <span data-translate="{{'concoursphotoApp.UserType.' + vm.siteUser.type}}">{{vm.siteUser.type}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="site-user-detail.edit({id:vm.siteUser.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

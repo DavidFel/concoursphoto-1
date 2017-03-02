@@ -1,0 +1,146 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPhotoLabel" data-translate="concoursphotoApp.photo.home.createOrEditLabel">Create or edit a Photo</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.photo.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.photo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="vm.photo.title"
+                    required/>
+            <div ng-show="editForm.title.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.title.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.dateCreate" for="field_dateCreate">Date Create</label>
+                <div class="input-group">
+                    <input id="field_dateCreate" type="text" class="form-control" name="dateCreate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.photo.dateCreate" is-open="vm.datePickerOpenStatus.dateCreate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateCreate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.dateCreate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateCreate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.uri" for="field_uri">Uri</label>
+            <input type="text" class="form-control" name="uri" id="field_uri"
+                    ng-model="vm.photo.uri"
+                    required/>
+            <div ng-show="editForm.uri.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.uri.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setImage($file, vm.photo)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="concoursphotoApp.photo.image" for="field_image">Image</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.photo.imageContentType + ';base64,' + vm.photo.image}}" style="max-height: 100px;" ng-if="vm.photo.image" alt="photo image"/>
+                <div ng-if="vm.photo.image" class="help-block clearfix">
+                    <span class="pull-left">{{vm.photo.imageContentType}}, {{vm.byteSize(vm.photo.image)}}</span>
+                    <button type="button" ng-click="vm.photo.image=null;vm.photo.imageContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setImage($file, vm.photo)" accept="image/*" data-translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="image" id="field_image"
+                    ng-model="vm.photo.image"
+                    />
+            <input type="hidden" class="form-control" name="imageContentType" id="field_imageContentType"
+                    ng-model="vm.photo.imageContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.photo.description"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.size" for="field_size">Size</label>
+            <input type="number" class="form-control" name="size" id="field_size"
+                    ng-model="vm.photo.size"
+                    required/>
+            <div ng-show="editForm.size.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.size.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.size.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.format" for="field_format">Format</label>
+            <input type="text" class="form-control" name="format" id="field_format"
+                    ng-model="vm.photo.format"
+                    required/>
+            <div ng-show="editForm.format.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.format.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.score" for="field_score">Score</label>
+            <input type="number" class="form-control" name="score" id="field_score"
+                    ng-model="vm.photo.score"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="concoursphotoApp.photo.nbVue" for="field_nbVue">Nb Vue</label>
+            <input type="number" class="form-control" name="nbVue" id="field_nbVue"
+                    ng-model="vm.photo.nbVue"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="concoursphotoApp.photo.siteUser" for="field_siteUser">Site User</label>
+            <select class="form-control" id="field_siteUser" name="siteUser" ng-model="vm.photo.siteUser" ng-options="siteUser as siteUser.id for siteUser in vm.siteusers track by siteUser.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="concoursphotoApp.photo.concours" for="field_concours">Concours</label>
+            <select class="form-control" id="field_concours" name="concours" ng-model="vm.photo.concours" ng-options="concours as concours.id for concours in vm.concours track by concours.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

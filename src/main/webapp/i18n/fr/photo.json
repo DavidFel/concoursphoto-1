@@ -1,0 +1,34 @@
+{
+    "concoursphotoApp": {
+        "photo" : {
+            "home": {
+                "title": "Photos",
+                "createLabel": "Créer un nouveau Photo",
+                "createOrEditLabel": "Créer ou éditer un Photo",
+                "search": "Recherche pour Photo"
+            },
+            "created": "Un nouveau Photo a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Photo avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Photo avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Photo {{ id }} ?"
+            },
+            "detail": {
+                "title": "Photo"
+            },
+            "title": "Title",
+            "dateCreate": "Date Create",
+            "uri": "Uri",
+            "image": "Image",
+            "description": "Description",
+            "size": "Size",
+            "format": "Format",
+            "score": "Score",
+            "nbVue": "Nb Vue",
+            "userPhotoVote": "User Photo Vote",
+            "userPhotoComment": "User Photo Comment",
+            "siteUser": "Site User",
+            "concours": "Concours"
+        }
+    }
+}

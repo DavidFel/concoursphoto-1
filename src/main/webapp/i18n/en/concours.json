@@ -1,0 +1,27 @@
+{
+    "concoursphotoApp": {
+        "concours" : {
+            "home": {
+                "title": "Concours",
+                "createLabel": "Create a new Concours",
+                "createOrEditLabel": "Create or edit a Concours",
+                "search": "Search for Concours"
+            },
+            "created": "A new Concours is created with identifier {{ param }}",
+            "updated": "A Concours is updated with identifier {{ param }}",
+            "deleted": "A Concours is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Concours {{ id }}?"
+            },
+            "detail": {
+                "title": "Concours"
+            },
+            "name": "Name",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "description": "Description",
+            "location": "Location",
+            "theme": "Theme"
+        }
+    }
+}

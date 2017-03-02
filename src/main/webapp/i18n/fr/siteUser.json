@@ -1,0 +1,29 @@
+{
+    "concoursphotoApp": {
+        "siteUser" : {
+            "home": {
+                "title": "SiteUsers",
+                "createLabel": "Créer un nouveau Site User",
+                "createOrEditLabel": "Créer ou éditer un Site User",
+                "search": "Recherche pour Site User"
+            },
+            "created": "Un nouveau Site User a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Site User avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Site User avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Site User {{ id }} ?"
+            },
+            "detail": {
+                "title": "Site User"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "birthDate": "Birth Date",
+            "email": "Email",
+            "address": "Address",
+            "jobTitle": "Job Title",
+            "charte": "Charte",
+            "type": "Type"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "theme",
+            "relationshipName": "concours",
+            "otherEntityName": "concours",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170223144505",
+    "entityTableName": "theme",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
