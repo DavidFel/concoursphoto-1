@@ -1,6 +1,7 @@
 {
     "home": {
-        "title": "Bienvenue, sur le site du concours Photo !",
+        "title": "Bienvenue sur le site du concours Photo !",
+
         "subtitle": "Concours Photo Page d'Accueil",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."

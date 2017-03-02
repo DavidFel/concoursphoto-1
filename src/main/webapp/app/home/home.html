@@ -3,23 +3,28 @@
         <div class="col-md-4">
             <span class="accueilIMG img-responsive img-rounded"></span>
         </div>
+        
+        <br> </br>
+        <br> </br>
         <div class="col-md-8">
-            <h1 data-translate="home.title">Bienvenue, sur le site du concours Photo !</h1>
-            <p class="lead" data-translate="home.subtitle">Concours Photo Page d'accueil/p>
+            <h1 data-translate="home.title">Bienvenue sur le site du concours Photo !</h1>
+              <br> </br>      
 
             <div ng-switch="vm.isAuthenticated()">
                 <div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">
                     You are logged in as user "{{vm.account.login}}".
                 </div>
-	 	<div class="alert alert-warning" ng-switch-when="false" >
-                    You don't have an account yet? <a class="alert-link" ui-sref="register">Register a new account</a>
-                </div>
-               
+					<div class="alert alert-warning" ng-switch-when="false" >
+                   		Vous ne semblez pas être connecté    : <a class="alert-link" ui-sref="register">Creer un compte </a>
+                	</div>
             </div>
+            <br> </br>
 
             <ul>
-                <p class="lead"> Ce concours est organiser par Mr Jean Luc Veret, Photographe de profession.</p>
-                <p class="lead">  test </p>
+                <p class="lead"  > Ce concours est organiser par Mr Jean Luc Veret, Photographe de profession.
+                Vous souhaitez visiter son site : <a href="http://jeanlucveret.fr/">jeanlucveret.fr</a> </p>
+
+                <p class="lead">  Ce concours est dédié au portrait <p/>
             </ul>
 
         </div>
