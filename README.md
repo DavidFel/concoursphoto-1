@@ -1,4 +1,7 @@
 # concoursphoto
+
+This application is a scholarship project for handling a Photo WebSite, using Springboot/AngularJS (from JHipster).
+
 This application was generated using JHipster 4.0.2, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v4.0.2](https://jhipster.github.io/documentation-archive/v4.0.2).
 
 ## Development
