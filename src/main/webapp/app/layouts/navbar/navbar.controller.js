@@ -38,7 +38,11 @@
         function toggleNavbar() {
             vm.isNavbarCollapsed = !vm.isNavbarCollapsed;
         }
-
+        
+		function gallery(){
+			vm.gallery = !vm.gallery;
+		}
+		
         function collapseNavbar() {
             vm.isNavbarCollapsed = true;
         }
